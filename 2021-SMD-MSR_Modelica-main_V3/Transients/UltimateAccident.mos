@@ -1,0 +1,4 @@
+//SMD-MSR_Modelica 
+    loadFile("SMD_MSR_Modelica.mo"); 
+    loadFile("MSRRv2.mo"); 
+    simulate(MSRR.MSRRmaxAccident.MSRRmaxAccidentUHX,startTime=0,stopTime=20000,numberOfIntervals=200000,tolerance=1E-6,method=dassl,outputFormat = "csv",fileNamePrefix ="uhxTrip", simflags="-maxStepSize=0.01");

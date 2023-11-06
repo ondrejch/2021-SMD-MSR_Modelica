@@ -1,0 +1,4 @@
+//SMD-MSR_Modelica 
+    loadFile("SMD_MSR_Modelica.mo"); 
+    loadFile("MSRRv2.mo"); 
+    simulate(MSRR.MSRRsteps.MSRRuhxHalfD,startTime=0,stopTime=10000,numberOfIntervals=100000,tolerance=1E-6,method=dassl,outputFormat = "csv",fileNamePrefix ="halfD");
