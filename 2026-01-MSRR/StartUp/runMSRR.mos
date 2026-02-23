@@ -1,0 +1,8 @@
+//SMD-MSR_Modelica 
+
+cd(getEnvironmentVar("HOME") + "/git/2021-SMD-MSR_Modelica/2026-01-MSRR/StartUp");
+
+loadFile("SMD_MSR_Modelica.mo"); 
+loadFile("MSRRv2.mo"); 
+
+simulate(MSRR.MSRRstartUp.MSRRstartUpUHX,startTime=0,stopTime=108000,numberOfIntervals=1080000,tolerance=1E-6,method=dassl,outputFormat = "csv",fileNamePrefix ="startUp", simflags="-maxStepSize=0.01");
